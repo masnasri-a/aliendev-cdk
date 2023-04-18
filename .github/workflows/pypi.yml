@@ -27,8 +27,10 @@ jobs:
       - name: Build package
         run: poetry build
 
+      - name: Configure to PyPI
+        run: poetry config http-basic.pypi alienpdev ${{ secrets.PYPI_PASSWORD }}
+
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v2
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
+        run: poetry publish
+
+      
