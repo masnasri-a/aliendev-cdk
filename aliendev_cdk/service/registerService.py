@@ -36,4 +36,4 @@ def register():
         else:
             password = getpass.getpass("Insert password: ")
             ingest(username, password)
-    pass
+            break
