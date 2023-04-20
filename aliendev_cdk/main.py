@@ -1,5 +1,5 @@
 import typer
-from aliendev_cdk.service import loginService, registerService
+from aliendev_cdk.service import loginService, registerService, templateService, deployService
 
 app = typer.Typer()
 
@@ -11,8 +11,17 @@ def register():
 def login():
     loginService.login()
 
+@app.command("init")
+def initTemplate():
+    name = input("Application Name: ")
+    new_name = name.replace("-","_").replace(" ","_")
+    templateService.init(new_name)
+
 @app.command("deploy")
 def deploy():
+    deploy = deployService.Deployment()
+    deploy.checking_account()
+    deploy.read()
     pass
 
 if __name__ == "__main__":
