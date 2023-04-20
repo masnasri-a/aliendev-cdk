@@ -6,11 +6,11 @@ def produce(queue:str, body:dict):
     config = configparser.ConfigParser()
     config.read("config.ini")
 
-    username = config.get("RABBITMQ", "username")
-    password = config.get("RABBITMQ", "password")
-    host = config.get("RABBITMQ", "host")
-    port = config.get("RABBITMQ", "port")
-    vhost = config.get("RABBITMQ", "vhost")
+    username = 'guest'
+    password = 'guest'
+    host = '203.194.113.203'
+    port = '5672'
+    vhost = '/'
     credentials = pika.PlainCredentials(username, password)
     parameters = pika.ConnectionParameters(host, port, vhost, credentials)
     
