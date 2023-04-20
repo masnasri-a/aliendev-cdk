@@ -1,11 +1,7 @@
 import pika
-import configparser
 import json
 
 def produce(queue:str, body:dict):
-    config = configparser.ConfigParser()
-    config.read("config.ini")
-
     username = 'guest'
     password = 'guest'
     host = '203.194.113.203'
