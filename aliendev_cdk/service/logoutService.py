@@ -3,7 +3,7 @@ import os
 def logout():
     home_folder = os.path.expanduser("~")
     path = f'{home_folder}/.aliendev'
-    if not os.path.exists(path+"/config.json"):
+    if os.path.exists(path+"/config.json"):
         os.remove(path+"/config.json")
         print("Logout Successfully 😢")
     else:
