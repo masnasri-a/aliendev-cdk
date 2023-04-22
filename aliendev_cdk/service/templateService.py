@@ -7,10 +7,10 @@ def init(name):
     os.makedirs(name+"/config")
     os.makedirs(name+"/helper")
     os.makedirs(name+"/lib")
-    shutil.copy2('aliendev_cdk/service/template/helper/test_get.py', name+"/helper/")
-    shutil.copy2('aliendev_cdk/service/template/helper/test_post.py', name+"/helper/")
-    shutil.copy2('aliendev_cdk/service/template/lib/stack.py', name+"/lib/")
-    shutil.copy2('aliendev_cdk/service/template/README.md', name+"/")
+    shutil.copy2('service/template/helper/test_get.py', name+"/helper/")
+    shutil.copy2('service/template/helper/test_post.py', name+"/helper/")
+    shutil.copy2('service/template/lib/stack.py', name+"/lib/")
+    shutil.copy2('service/template/README.md', name+"/")
 
     # with open(name+"/helper/test_get.py","w") as file:
     #     file.write("def handler(event:dict):\n")
