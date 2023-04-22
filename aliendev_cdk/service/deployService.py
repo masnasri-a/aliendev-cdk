@@ -14,9 +14,9 @@ class Deployment:
         path = f'{home_folder}/.aliendev'
         if not os.path.exists(path):
             os.makedirs(path)    
-            print("folder created")
+            print("please login first 🥹")
         if not os.path.exists(path+"/config.json"):
-            print("please login first")
+            print("please login first 🥹")
         else:
             with open(path+"/config.json",'r') as file:
                 json_file = json.loads(file.read())

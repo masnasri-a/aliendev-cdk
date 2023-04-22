@@ -1,5 +1,5 @@
 import typer
-from aliendev_cdk.service import loginService, registerService, templateService, deployService
+from aliendev_cdk.service import loginService, registerService, templateService, deployService, logoutService
 
 app = typer.Typer()
 
@@ -10,6 +10,10 @@ def register():
 @app.command("login")
 def login():
     loginService.login()
+
+@app.command("logout")
+def logout():
+    logoutService.logout()
 
 @app.command("init")
 def initTemplate():
