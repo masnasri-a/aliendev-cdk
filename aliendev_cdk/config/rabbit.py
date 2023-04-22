@@ -17,4 +17,5 @@ def produce(queue:str, body:dict):
     channel.exchange_declare(exchange="aliendev", exchange_type="topic")
     channel.queue_bind(queue=queue, exchange="aliendev",routing_key="aliendev-route")
     channel.basic_publish(exchange="aliendev", routing_key="aliendev-route", body=json.dumps(body))
-    print(f"Sent message '{json.dumps(body)}'")
+    # print(f"Sent message '{json.dumps(body)}'")
+    print("Your engine has deployed 😀")

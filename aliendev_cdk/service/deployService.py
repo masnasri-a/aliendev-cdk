@@ -41,5 +41,5 @@ class Deployment:
                 strings['account_id'] = self.account_id
                 strings['file_name'] = file_name
                 strings['data'] = f.read()
-                print(strings)
+                # print(strings)
                 rabbit.produce('helper',strings)
