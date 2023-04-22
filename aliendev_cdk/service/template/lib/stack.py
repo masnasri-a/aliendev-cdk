@@ -1,6 +1,6 @@
 from aliendev_api import ApiGateway
 
-api = ApiGateway("username", "Test API")
+api = ApiGateway("Test API")
 param = [[{"key": "name","data_type": "string","required": True},{"key": "age","data_type": "int","required": False}]]
 
 api.addMethod(method="GET", prefix="/test-get",param_type="param", data=param)
